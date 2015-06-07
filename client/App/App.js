@@ -18,6 +18,7 @@ let App = React.createClass({
         <h1>Travel Guru</h1>
         <input
           type="text"
+          className='location-input'
           value={this.state.locationText}
           onChange={this.handleTextEntry}
           placeholder='Where are you going?' />
