@@ -9,8 +9,7 @@ if (!FORECAST_API_KEY) {
 }
 
 let forecast = new Forecast({
-  APIKey: FORECAST_API_KEY,
-  timeout: 1000
+  APIKey: FORECAST_API_KEY
 });
 
 let router = require('express').Router();
@@ -28,6 +27,7 @@ router.get('/forecast', (req, res, next) => {
   forecast.get(lat, long, (err, response, data) => {
     if (err) {
       err.status = err.status || 500;
+      console.log(err);
       console.log('There was a forecast.io error');
       return next(err);
     }

@@ -31,6 +31,9 @@ a
 strong
   font-weight bold
 
+h1
+  margin-bottom 20px
+
 
 // }}} END Tags
 
@@ -42,6 +45,8 @@ strong
 .container
   padding 50px 20px
   margin 0 auto
+  min-width 300px
+  max-width 1000px
 
 .App
   background off-white
@@ -52,4 +57,93 @@ strong
 
   .location-input
     width 100%
+
+
+.current
+.seven-day
+  display inline-block
+  vertical-align top
+
+.current
+  width 40%
+  +below(830px)
+    width 100%
+    display block
+
+  &>div
+    display inline-block
+    vertical-align top
+
+  .icon
+    margin-right 20px
+
+  .temperature
+    font-size 120px
+
+  .degree
+    font-weight 300
+    font-size 40px
+    vertical-align top
+
+  .summary
+    display block
+    font-size 24px
+
+.seven-day
+  width 60%
+
+  +below(830px)
+    width 100%
+    display block
+
+  .table
+    display table
+    width 100%
+    margin 0
+    padding 0
+
+    .day
+      margin-bottom 5px
+      color red
+
+    .high
+      font-weight bold
+      font-size 24px
+      margin-bottom 5px
+
+    li
+      display table-cell
+      list-style none
+      text-align center
+
+
+// PackingList {{{
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+.packing-list
+  padding 0
+  li
+    font-size 24px
+    list-style none
+    p
+      display inline-block
+
+.super-input
+  input
+    width 100%
+
+.remove
+  appearance none
+  outline none
+  border none
+  background transparent
+  display inline-block
+  padding 0
+  margin-left 10px
+  cursor pointer
+  &:hover
+    color red
+
+// }}} New PackingList Styles
 
