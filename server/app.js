@@ -33,7 +33,7 @@ app.use('/api', api);
 
 // Send the boilerplate HTML file down for all get requests that aren't to the
 // API.
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index.jade', { scriptPath: publicPath + 'app.js' });
 });
 
